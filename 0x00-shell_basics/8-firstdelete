@@ -1,2 +1,2 @@
-#!b/in/bash
+#!bibn/bash
 rm /tmp/my_first_directory/betty
