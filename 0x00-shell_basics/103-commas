@@ -1,2 +1,1 @@
-#!/bin/bash
-ls -a --group-directories-first
+#!/bin/bash ls -amp | sort -d
