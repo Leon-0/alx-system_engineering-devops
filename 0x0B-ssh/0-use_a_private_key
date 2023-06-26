@@ -1,2 +1,2 @@
 #!/bin/bash
-ssh -F ~/.ssh/school
+ssh -F ~/.ssh/school ubuntu@server.com
