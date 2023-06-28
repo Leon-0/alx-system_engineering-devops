@@ -1,4 +1,26 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# Update package lists
+apt-get update
+
+# Install nginx package with '-y' option to automatically answer 'yes' to prompts
+apt-get install -y nginx
+
+# Configure Nginx to listen on port 80
+sed -i 's/listen 80 default_server;/listen 80;/' /etc/nginx/sites-available/default
+
+# Restart Nginx
+service nginx restart
+
+# Allow incoming traffic on port 80 using ufw
+ufw allow 80
+
+# Enable ufw
+ufw --force enable
+
+# Create an HTML file with the desired content
+echo "Hello World!" > /var/www/html/index.html
+
 
 # Update package lists
 apt-get update
