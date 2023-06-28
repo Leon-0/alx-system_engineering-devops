@@ -2,14 +2,14 @@
 # Script automates the installation and configuration of an nginx web server
 
 # Update package lists
-sudo apt-get update -y
+apt-get update 
 
 # Install nginx package with '-y' option to automatically answer 'yes' to prompts
-sudo apt-get install -y nginx
+apt-get install -y nginx
 
 # Configure Nginx to listen on port 80
 ufw allow 'Nginx HTTP'
-sudo sed -i 's/listen 80 default_server;/listen 80;/' /etc/nginx/sites-available/default
+sudo sed -i 's/80 default_server/80/' /etc/nginx/sites-available/default
 
 # Restart Nginx
 sudo service nginx restart
