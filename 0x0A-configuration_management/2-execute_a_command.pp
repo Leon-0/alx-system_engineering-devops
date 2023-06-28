@@ -1,4 +1,4 @@
-# Define the exec resource to kill the process
+# kill a process named 'killmenow'
 
 exec { 'killmenow':
   command     => 'pkill killmenow',
