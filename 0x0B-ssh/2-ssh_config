@@ -1,4 +1,4 @@
-Host 34.204.60.144
+Host 3.95.32.94
     User ubuntu
     IdentityFile ~/.ssh/school
     PasswordAuthentication no
