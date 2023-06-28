@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Script automates the installation and configuration of an nginx web server
+# script automates the installation and configuration of an nginx web server
 
 # Update package lists
 sudo apt-get update  -y
@@ -8,11 +8,11 @@ sudo apt-get update  -y
 sudo apt-get install -y nginx
 
 # Configure Nginx to listen on port 80
-#ufw allow 'Nginx HTTP'
+ufw allow 'Nginx HTTP'
 sudo sed -i 's/80 default_server/80/' /etc/nginx/sites-available/default
 
 # Restart Nginx
 sudo service nginx restart
 
 # Create an HTML file with the desired content
-echo "Hello World!" | sudo tee /var/www/html/index.html > /dev/null
+echo 'Hello World!' | sudo tee /var/www/html/index.html > /dev/null
