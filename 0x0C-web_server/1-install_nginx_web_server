@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Script automates the installation and configuration of an nginx web server
 
 # Update package lists
 apt-get update -y
