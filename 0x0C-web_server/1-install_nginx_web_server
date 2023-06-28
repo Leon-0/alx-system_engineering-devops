@@ -2,16 +2,16 @@
 # Script automates the installation and configuration of an nginx web server
 
 # Update package lists
-apt-get update -y
+sudo apt-get update -y
 
 # Install nginx package with '-y' option to automatically answer 'yes' to prompts
-apt-get install -y nginx
+sudo apt-get install -y nginx
 
 # Configure Nginx to listen on port 80
-sed -i 's/listen 80 default_server;/listen 80;/' /etc/nginx/sites-available/default
+sudo sed -i 's/listen 80 default_server;/listen 80;/' /etc/nginx/sites-available/default
 
 # Restart Nginx
-service nginx restart
+sudo service nginx restart
 
 # Create an HTML file with the desired content
 echo "Hello World!" > /var/www/html/index.html
