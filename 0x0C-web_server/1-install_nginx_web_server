@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Automated install of nginx web server
 
 # Update package lists
 apt-get update
